@@ -3,3 +3,4 @@ matplotlib
 seaborn
 pyarrow
 fastparquet
+plotly
