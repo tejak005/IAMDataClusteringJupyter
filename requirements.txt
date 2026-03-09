@@ -4,3 +4,4 @@ seaborn
 pyarrow
 fastparquet
 plotly
+scikit-learn
