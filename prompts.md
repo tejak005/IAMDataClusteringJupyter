@@ -96,3 +96,35 @@ Please write a Python function to perform the following advanced assembly and sc
    - Ensure the index (`identity_id`) is preserved.
 
 Provide the complete, runnable code.
+
+
+
+
+Act as an expert Machine Learning Engineer. I am working on a Jupyter Notebook for an IAM (Identity and Access Management) Peer Group Analysis project following the CRISP-DM methodology. 
+
+I have already completed the Data Understanding, Data Preparation, and Modeling phases. 
+Here is a summary of the current state of my notebook:
+1. Feature Engineering: I created HR features (one-hot encoded `department`, `job_title`, `location`), a binary User-Entitlement access matrix, and aggregate features (scaled counts of total and high-risk entitlements). I reduced this combined matrix using TruncatedSVD into `X_reduced`.
+2. Modeling: I applied K-Means (k=20) to `X_reduced` to discover peer groups, and DBSCAN to flag anomalies. 
+3. Merging: I mapped the results back to the original identities DataFrame, resulting in a DataFrame named `df_identities_enriched`. 
+4. The `df_identities_enriched` DataFrame contains the following columns: `identity_type`, `status`, `location`, `cost_center`, `department`, `job_title`, `manager_id`, `kmeans_peer_group` (int), `dbscan_label` (int), and `is_anomaly` (boolean).
+5. Existing Visualization: We are strictly using `plotly.express` and `plotly.graph_objects` for all charts.
+
+Please write the Python code cells to execute Phase 5: Evaluation from CRISP-DM. 
+
+Specifically, I need code to accomplish the following in the notebook:
+
+### Step 1: Cluster Profiling (Peer Group Analysis)
+* We need to understand what defines each K-Means cluster. Write code to group `df_identities_enriched` by `kmeans_peer_group`.
+* For each group, calculate the most frequent (mode) `department` and `job_title`, and count the total number of users in that cluster. 
+* Output this as a summary DataFrame called `cluster_profiles`.
+* Create a Plotly Express bar chart showing the size of each cluster, colored or grouped by the dominant department. 
+
+### Step 2: Anomaly Deep Dive
+* Filter `df_identities_enriched` to isolate the anomalies (`is_anomaly == True`) into a DataFrame called `df_anomalies`.
+* Write code to analyze *where* these anomalies are coming from. Group the anomalies by `department` and `job_title` to find where the most risk lies.
+* Create a Plotly Express bar chart showing the count of Anomalies by Department.
+
+### Step 3: Business Impact Summary
+* Write a final code cell that prints out a formatted executive summary for the security team (e.g., total users, total peer groups discovered, total anomalies flagged, and the top 3 departments with the highest amount of anomalies).
+
