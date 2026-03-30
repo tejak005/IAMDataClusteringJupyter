@@ -1,99 +1,114 @@
-identity_id,identity_type,status,location,cost_center,department,job_title,manager_id,kmeans_peer_group,dbscan_label,is_anomaly
-79374ded-24d3-49aa-9fd6-cc9c16fc2ee0,Human,Inactive,Jacksonshire,CC-0572,Legal,Contract Manager,8d50f6f1-fbfb-4582-8b4f-f4e7fc1dbcd1,6,-1,True
-7621d8ee-2514-4569-8bab-7fc286f86425,Service Account,Inactive,Lake William,CC-1538,Operations,Logistics Coordinator,9a6de34e-ac0d-4e6b-a79e-a121cc0bd64e,6,-1,True
-6fd7993b-bb2c-45ce-aff7-ebd28bd3a8aa,Human,Inactive,Courtneyville,CC-4398,Legal,General Counsel,e7ad3f1a-8646-4479-a738-629ee4e66e1b,6,-1,True
-0766ce7e-226d-4f80-88cd-2a79cf516c53,Human,Inactive,East Tammyside,CC-0557,Engineering,Architect,e06f4609-eb04-455a-b8a6-c8e69941cee5,6,-1,True
-877471d7-0eda-4756-9217-340c7d3f4fe1,Human,Inactive,Jeremyview,CC-8714,Legal,Compliance Officer,ccef806c-7035-4cd1-8965-ec2b922e437c,6,-1,True
-0985b474-12ad-4b82-8b39-7ae205cf0674,Human,Leave,Maryfurt,CC-5269,Legal,Legal Counsel,baa65205-038f-4a04-8a15-3a6cbd88c5b2,6,-1,True
-86d1f801-efed-45d7-a7f4-09949660f8f2,Human,Leave,Anthonyfort,CC-0058,Finance,Controller,f62ccc6e-1781-4ab3-8057-2a8f9ad78601,6,-1,True
-902dcd3e-7fed-4fb2-827f-e61915ecba06,Human,Leave,Weaverville,CC-1472,HR,HRBP,0ac1d7d1-13a2-470f-8b07-637087b96636,6,-1,True
-eefa221d-948b-43ae-8df6-32c535f77a76,Human,Leave,Lake Jack,CC-2114,Legal,Legal Counsel,52ce90c4-ab85-4421-84c4-d603ad53fa7a,6,-1,True
-16806f55-980d-4401-bf4d-2997bf4f269f,Human,Leave,New Logan,CC-2922,Finance,Financial Analyst,06015ca8-3f93-435a-add0-2cb8f53ef009,6,-1,True
-50b00d87-58f4-4cb4-902b-110b6fd154af,Human,Inactive,Port Malik,CC-5522,Product,Head of Product,6ee48fff-d89a-4db3-a5cf-c661f4602002,6,-1,True
-e0ca1cf2-3ada-4029-abf1-84a1f6cc9721,Human,Leave,Jordanhaven,CC-2967,Customer Support,Technical Support,4018877b-803d-499e-8dbf-5af4f0b74e55,6,-1,True
-c0745959-6ddd-415b-b4ca-b76bd7c41a5d,Human,Leave,West Michael,CC-8807,Sales,Sales Representative,261f75a2-ca4a-4824-9df2-1263c7b3e892,6,-1,True
-73072594-b669-4b38-90d9-d7a6f9fa4098,Human,Leave,Port Tanya,CC-5445,Finance,Controller,,6,-1,True
-f5deba9b-79e0-41c9-9f36-7b858cd1a74d,Human,Leave,Sawyermouth,CC-4752,Marketing,Content Writer,c49d2523-bd47-4216-b793-fb1043c66cce,6,-1,True
-1a784a94-484f-41a9-a22f-e49158880404,Service Account,Leave,West Brett,CC-3842,Operations,Analyst,a6eae836-e5b9-4964-9fcb-fffc4e7c39f1,6,-1,True
-0b0c6409-0354-4428-8332-88f894cdb4c9,Human,Inactive,Brownstad,CC-9651,Finance,Auditor,,6,-1,True
-3900ee75-953a-4b91-b909-78c924813a3b,Human,Leave,Coopershire,CC-5998,HR,HR Specialist,ca0dedb9-c280-44bb-8f85-00f68b55d462,6,-1,True
-1e856efb-3a82-4dde-9dca-7d4684baebaf,Human,Inactive,Autumnshire,CC-3046,Customer Support,Technical Support,5bebc6da-709f-4fe4-a416-cbc8e259f594,6,-1,True
-322fe739-3bbe-45a2-b003-6611275ee2a5,Human,Inactive,Davidsonview,CC-1526,IT,IT Manager,79f2be74-57fc-48bf-9371-d44d7019ae7d,6,-1,True
-368146db-f751-4e08-ae90-71f065ba312a,Human,Leave,Smithtown,CC-0003,IT,Help Desk,75dbc7f3-a569-4cef-90f3-5cef168554d6,6,-1,True
-a32a66e7-0298-4ef7-900c-d53dfbab43da,Human,Inactive,New Kayla,CC-1289,Marketing,Designer,e8bf528c-019d-4d27-98ee-20fa4789dcc8,6,-1,True
-30716439-9660-43f7-94e8-438a5bc0b684,Human,Inactive,Lake Jessica,CC-5344,Customer Support,Technical Support,fda0fc66-004a-4d3c-94cc-4d135b915058,6,-1,True
-2f19e60b-0b6b-42d7-8cad-2f37929e1762,Human,Inactive,Hillfort,CC-0744,Engineering,DevOps Engineer,7fae8b16-3596-4bc4-abf5-c2b9672bdbfd,6,-1,True
-797921d3-1887-4929-86d9-3d625e227eb8,Human,Inactive,Port Miguelton,CC-6892,Operations,Ops Manager,,6,-1,True
-c72a95ea-0c1f-4aa6-8c5b-bb6dea667fdd,Human,Leave,East Billyland,CC-8172,Customer Support,Support Lead,f4ac8889-bddd-48b7-b6ba-d40d54741f12,6,-1,True
-f593b6a6-28d3-4f83-ab4c-db0bd625ab7e,Human,Leave,Daniellehaven,CC-5803,Operations,Ops Manager,65cbf4d7-c6f9-4e87-83a1-ccf51b978dcd,6,-1,True
-6da9b53d-1f4f-4913-9af3-8022e52c1260,Service Account,Leave,East Nicoleborough,CC-7484,Sales,Sales Representative,f735e19c-6e1d-4f0b-8f26-8f20ea4132a6,6,-1,True
-50f7ef86-0d0f-4e52-9f56-cb32dd0d430f,Human,Inactive,Dicksonborough,CC-8828,Engineering,Architect,0d996561-84ec-4be7-afe5-f66365df9a55,6,-1,True
-197b8d9c-914e-44d4-b4f8-196012f2d087,Human,Leave,North Tyler,CC-6616,Marketing,Designer,c94ed972-c765-479b-83f6-823c3efa4b4f,6,-1,True
-325a6127-3fca-457d-a44a-06e0abf37cf6,Human,Inactive,Ramoshaven,CC-6550,Finance,Auditor,2f418a07-e687-41e6-8221-16a7fccdff0c,6,-1,True
-8f558d65-7bf2-4cfc-9f04-ccc6d63aac11,Human,Inactive,Calhounland,CC-8918,Sales,Sales Ops,1ea85e45-560b-413c-ace1-53406be0eaa7,6,-1,True
-9bcb54f9-4024-4b95-9e80-fcec43e56715,Human,Inactive,Shannonborough,CC-0959,Legal,Legal Counsel,1e4b8aeb-c0ce-4923-8bd7-473056a04f08,6,-1,True
-d8273aa0-4d40-4fd2-bef6-ad3618cee215,Human,Inactive,Lake Zachary,CC-6030,Finance,Accountant,51e42a96-3f11-43fc-8230-e52233136ed8,6,-1,True
-92557dc0-b6ae-4376-b72b-926c1699d792,Service Account,Inactive,New Jessica,CC-0055,Customer Support,Support Lead,05898342-3916-4d8f-8aa6-efa56b44d32e,6,-1,True
-85ea809e-b586-41a4-8bda-1bb826a5c368,Human,Leave,West John,CC-0119,Engineering,Architect,1af73231-2344-40dc-baa5-3d6692fea3f4,6,-1,True
-7231e79a-e618-46df-9d04-896e45ae480c,Human,Leave,Nicolechester,CC-3036,IT,IT Manager,e1295b6b-7b1e-46aa-b1de-03a7f2c730b7,6,-1,True
-44b3d3fd-7c1a-4472-bf01-c7681bf26c5f,Human,Leave,Port Heidi,CC-9523,IT,IT Manager,fc7d7ca9-767a-40f5-9e6e-1d911c3b4b92,6,-1,True
-512c4678-16fa-4e05-9ff0-9c95310f8ad9,Human,Leave,Michaelbury,CC-6912,Finance,Auditor,601382d7-f51c-4848-95f6-a6691c509646,6,-1,True
-a0dcd52f-fae4-4c91-b84c-1422ba902de0,Service Account,Inactive,Michealview,CC-7998,Operations,Logistics Coordinator,2f36060e-28c8-409f-96d3-cb1a433bbb38,6,-1,True
-6aff1c88-2708-4a0d-9681-e7da0ebd9e69,Human,Leave,Alexisport,CC-8429,HR,HRBP,58dc00fb-c913-4ac6-af4a-bbc3e7a6cdd9,6,-1,True
-6374332e-e2c8-491c-8b6f-2f0ae9467ffa,Human,Inactive,Gregorymouth,CC-8090,Product,Product Owner,ffd8f2c1-c720-4027-b93b-ab1c8fdb387b,6,-1,True
-aef19a76-b5e0-4e2d-8185-caeccd6185e8,Human,Inactive,North Markstad,CC-1265,Product,Product Manager,a533dda0-c6b2-413d-94f8-2ff34c2c491a,6,-1,True
-08386337-981d-44df-b540-fae3050667e6,Human,Leave,Reyesmouth,CC-6139,Operations,Ops Manager,13728a11-14d9-4e14-9958-704e7b70ff84,6,-1,True
-f5d9584e-9b64-4035-8f71-7a33e4679975,Human,Inactive,Jimmyview,CC-2828,Legal,Contract Manager,3a1e6240-a4ba-4450-be7b-4afd316c72b8,6,-1,True
-47798519-aafa-4d3f-af60-be710f772473,Human,Leave,West Gina,CC-9365,Operations,Project Manager,10ef3616-cb77-4a3b-a9fa-9af531adb41e,6,-1,True
-ba1bbc1f-9030-4839-879e-8d3208f9298b,Human,Leave,Kingland,CC-9358,Engineering,DevOps Engineer,ccc0f4e9-22d2-46dc-947f-967917cc887d,6,-1,True
-b8a70198-86f1-454b-9d3c-f16e692d2784,Human,Inactive,Port Amyshire,CC-0240,HR,HR Specialist,e925cdc1-2bc2-4749-9df3-8194c8fc8058,6,-1,True
-fe5727a6-1e52-4989-b20f-18037fc85fbd,Human,Inactive,North Jasmine,CC-9329,IT,Security Analyst,9dc8aec7-f7e1-4bab-9c02-6fd1d2f9c0c3,6,-1,True
-95d07d03-ce37-4d8c-a1e5-7a5331597c9f,Human,Inactive,Lopezfort,CC-0988,Legal,Contract Manager,be4e5e94-04de-4cff-93bf-a58d809a1770,6,-1,True
-40d5c900-bbb2-474b-8b62-25ae998e3ed9,Service Account,Leave,West Angelafurt,CC-8029,Marketing,Designer,6329ed3d-8633-4cb7-b93c-ce8f59dd0687,6,-1,True
-4302d3f7-e96c-4a38-9b28-09b93966b48c,Human,Leave,Port Douglas,CC-6551,HR,HR Manager,1b8d8b4e-9a55-4762-a08e-5bc99afeb581,6,-1,True
-bc228f98-42c4-4960-9e1c-406c3a35dca3,Human,Inactive,Evanston,CC-3642,IT,Security Analyst,dfaab5dd-f248-40a3-a200-645280d53667,6,-1,True
-7a15314a-90cb-4baa-9b25-21634a45192a,Human,Leave,Williamsonchester,CC-5411,HR,HRBP,80cbdc83-4296-4b43-b860-ddf13a6a3765,6,-1,True
-3fac6f73-13b9-4077-baa6-4a2abf1bbc1e,Human,Leave,Lake Rhondamouth,CC-4564,Customer Support,Support Lead,884c1b3e-1a3f-4041-8848-eb1b0afd044a,6,-1,True
-d45c0095-30eb-44a9-9939-ccbbf16caaca,Human,Leave,Laurieville,CC-8583,Sales,Sales Ops,283ea839-10eb-48e9-b507-e0cade762398,6,-1,True
-09fb72e1-2bfe-4265-a453-3820b22a5e48,Human,Inactive,New Elizabeth,CC-1945,Marketing,Content Writer,bb13685e-82de-47f7-ac8b-21bf3ddce1a3,6,-1,True
-7b4ac509-8585-4e6f-93df-703d7ba8398b,Human,Leave,West Abigail,CC-1606,Sales,Sales Manager,8739ce5b-4e50-49f7-acef-4f81911787f1,6,-1,True
-40392de5-0cf1-4e63-bc05-61c3b1f3d680,Human,Leave,South Benjaminport,CC-1747,Operations,Director of Ops,3acad4a7-65d3-4033-8f7e-59e7f50aa128,6,-1,True
-4d20a6f6-7ae7-4558-8b8c-5ac40ed19fc2,Service Account,Leave,Brittanyview,CC-8397,Operations,Project Manager,0ab97448-f2d1-477d-9c26-0e5ae1363fe3,6,-1,True
-bbc74b0a-e44d-4050-8844-16e941089a64,Human,Inactive,Lake Christine,CC-3300,Product,Product Manager,48e8b1c8-1171-445e-9227-509d08e4c2d4,6,-1,True
-72b4d81c-78da-4786-b5b7-e1a63817688f,Human,Leave,Port Jessicaton,CC-9317,Finance,Controller,6c9fc4c9-d359-4aa8-9545-2d999b78c481,6,-1,True
-efad4332-c679-49e7-bc68-b2c07d42d99b,Human,Inactive,West Jocelyn,CC-8563,HR,HR Manager,6604fa65-2fb6-4da4-aef2-c561b6871872,6,-1,True
-c911059d-957c-45f5-b8c0-30b243ec3d91,Human,Leave,Allisonland,CC-8070,Operations,Ops Manager,5cbd7719-ed78-4d7e-a215-9df08bdff98b,6,-1,True
-0b6c8668-9c06-4149-8a6b-893681a3d4dd,Human,Leave,Phillipfort,CC-1165,Sales,Sales Representative,f0059120-124e-425c-b8d0-a64bcb56648e,6,-1,True
-2676b959-2d8d-472e-993d-4200218e361b,Human,Inactive,Perezside,CC-9760,Customer Support,Support Lead,1f8659d3-ceba-4614-a9cb-7cafa157d0dd,6,-1,True
-83d8bb36-c9d1-4d2e-b801-e4958f81c026,Human,Leave,Lake Timothyview,CC-9984,HR,Benefits Coordinator,7bd055b0-d5a7-4537-a38a-502230d28305,6,-1,True
-6b24c3e7-9fe6-4fba-a5c4-9cde30ed09a9,Human,Inactive,Michelleberg,CC-4972,Legal,Compliance Officer,54bd7380-2ec0-44c0-996c-a86bb360594c,6,-1,True
-24529dfa-2a01-4b73-b434-5be111106c76,Human,Inactive,West Bobbyview,CC-5583,Legal,Legal Counsel,e7065320-1a52-4774-8284-80c13382d6f8,6,-1,True
-ccb40a37-9e28-4245-9fef-2a8bfd2561d4,Human,Inactive,East Nicoleville,CC-0961,IT,Help Desk,17531d22-1a7f-4f14-aaed-93573d2f6042,6,-1,True
-5c483d56-16f2-4f54-95a5-7f81aec6e75f,Human,Inactive,Lake Nicolestad,CC-8930,Engineering,DevOps Engineer,4ceea578-9ee3-430a-b9f3-17f8dd1c818e,6,-1,True
-07d61565-4a58-4ee8-a9b8-538614d25be9,Human,Inactive,Daystad,CC-4316,HR,HR Specialist,db2bcf0e-839d-4e97-8803-abd86d0a0e33,6,-1,True
-b9312c93-5a54-4d3d-90cd-cea4f4e8cc88,Human,Leave,Anthonychester,CC-2683,IT,Security Analyst,9daa79a3-e027-4c84-ad4b-5e4e1a879362,6,-1,True
-56a0129a-132c-4ebe-967e-bde289d2d822,Human,Leave,Mauriceport,CC-7800,Marketing,SEO Specialist,,6,-1,True
-b13b82be-5b27-4761-93e4-ac779efe429b,Human,Leave,Paulland,CC-6285,Customer Support,Support Agent,d8b55912-d35f-4c2e-ac34-d28d02b0adce,6,-1,True
-1716b7c6-314f-4741-bfa9-9f03f75b07b0,Human,Leave,South Gregory,CC-3950,Customer Support,Success Manager,a25ddf0a-546e-43b9-bcc7-cf92b46407a5,6,-1,True
-577edccc-46cc-483c-8edf-d7b680cfaacb,Human,Inactive,Crawfordview,CC-5193,Operations,Project Manager,db028681-f38e-4c03-9883-b9bf31635d85,6,-1,True
-6a506031-0189-4bbb-80fd-0a9aad2a28af,Human,Leave,Lake Alan,CC-2864,Engineering,QA Engineer,88517e47-6364-4088-b28b-dcc2c09e752c,6,-1,True
-aa5fefa4-467a-4470-83c3-3a16e46b6a23,Human,Inactive,Larsonborough,CC-5321,Customer Support,Technical Support,71f0b505-ad39-48d5-8e83-e0dbcfc02c97,6,-1,True
-19cf2e45-ff58-4abd-a4c2-9c9c1b544de8,Human,Inactive,Ruizside,CC-9897,Finance,Controller,40bc8f5a-ee96-4a27-b835-75fc5405cbd5,6,-1,True
-9063ef0c-6c09-4c21-a9e6-dc1db406e657,Human,Leave,New Claudia,CC-7708,HR,Benefits Coordinator,728ad4b4-214d-4bc0-872c-ff720964f502,6,-1,True
-5766da3d-293b-4c99-9734-796358152ab5,Human,Inactive,West Jocelyn,CC-2909,HR,HRBP,,6,-1,True
-302fb7f3-9a65-486a-93f4-96c60b38acb3,Human,Leave,Ramirezbury,CC-4684,IT,Help Desk,144e0496-cfd0-4f0c-bcb8-21a7208081db,6,-1,True
-0a180adb-9d36-4ca2-93ad-34a9776ee7de,Human,Leave,West Jamesfurt,CC-7154,HR,HR Manager,feecc9f7-9c3d-47a0-93c6-8a422035d55f,6,-1,True
-99579044-d445-444e-96b0-8440d3350779,Human,Inactive,North Stephanie,CC-0706,Legal,Contract Manager,,6,-1,True
-0604f9bd-302c-4ce8-9647-c4026f06d3a1,Human,Inactive,Weberland,CC-1309,IT,SysAdmin,83097849-1891-477b-a1d2-24fcc7e909ae,6,-1,True
-3fdf06b2-6d81-417e-8799-47b8beb3eed2,Human,Inactive,Farmershire,CC-2859,Operations,Analyst,ff1e9e22-5a31-4664-bd5f-2e1a7779ce5e,6,-1,True
-a79d2070-fd78-4457-a10f-e8e4c805d018,Human,Inactive,West Ann,CC-8728,Sales,Sales Manager,f33e2aa9-68f3-435b-80f2-95ad8c238d1b,6,-1,True
-d3de7df8-58ed-40b5-8aaf-ae4f137d41c5,Human,Leave,Lewisside,CC-5643,HR,HR Manager,dee62150-39fa-423f-9c40-cf885f8892fd,6,-1,True
-a4a3e4fe-2e74-4b67-87af-c0676142bf12,Human,Inactive,Stonestad,CC-9936,Product,Head of Product,47fd782f-f249-4fa3-a8dd-354108b4d573,6,-1,True
-6aad33f4-4a1a-4afc-a8a5-e2293c1f8716,Human,Inactive,Lake Christinafurt,CC-9514,Engineering,DevOps Engineer,9fd4c7f4-c069-4ed9-8ba3-c3ff99722047,6,-1,True
-3fbe0c66-f762-4c1f-8332-d14b8f4672f9,Human,Inactive,Port Alexanderborough,CC-4476,Engineering,Architect,eeff3893-d523-42ee-b44d-2d4c22e30744,6,-1,True
-27d8749b-b5bb-4bd6-9020-e923a01dac4e,Human,Inactive,East Normaborough,CC-8348,Product,Product Manager,a9f73eb5-078d-4777-9d93-7296e644513d,6,-1,True
-c1ccc854-05a8-4ed0-8b0d-181cc900c49e,Human,Inactive,Kimstad,CC-2335,Finance,Financial Analyst,c5d87976-cb40-4f9f-8aec-f5a78fd67e73,6,-1,True
-fe57900d-40f9-4b5a-9ec3-79babc1e85f1,Human,Inactive,Johntown,CC-6078,Sales,Sales Representative,71e77b86-7970-427e-a954-4c4e2284158b,6,-1,True
-79bf88e7-7a87-4ee5-9ac5-39c39845d0c2,Human,Leave,South Danaberg,CC-3504,Engineering,Engineering Manager,,6,-1,True
-b40a73ae-a188-4714-8ef2-76e689cd8cd5,Human,Leave,Walkerberg,CC-7282,Marketing,Marketing Manager,c54da5c3-947e-4fb6-a61c-4588a4ed1149,6,-1,True
-04d1b901-388f-4855-b523-c62b82f35eda,Human,Leave,Lake Saraport,CC-1663,Customer Support,CS Manager,add85501-1bf6-4f5b-8c46-3afcb18f4837,6,-1,True
+identity_id,identity_name,identity_type,status,location,cost_center,department,job_title,manager_id,kmeans_peer_group,dbscan_label,is_anomaly
+08a84f61-5ff2-44fb-a1ef-4d16673450b8,Bobby Hall,Human,Inactive,Lake Brad,CC-8120,Legal,General Counsel,6721e689-4c41-4ce5-a888-3af4795279c7,8,-1,True
+d8bdf96d-d4dd-442d-9931-fabcd7fc03b8,Michelle Smith,Human,Leave,Stewartstad,CC-4992,Engineering,QA Engineer,0580a10c-aeed-4909-a4fc-77afac1c91b4,8,-1,True
+28c9b072-df79-422e-8f6d-f67c0bd12beb,Penny Anderson,Human,Leave,East Kevin,CC-2470,Marketing,Marketing Manager,e2f2bd4c-4d18-4eb6-93e8-9f5433f63c8b,8,-1,True
+6bdb1d5e-949e-4a77-bb80-715e03fa5e12,Lisa Grant,Human,Leave,New Tylerburgh,CC-2834,Engineering,Software Engineer,8a8152d2-471b-4f47-b134-8254ee053160,8,-1,True
+2e384bda-98e9-4355-80b2-d87748208c09,Alan Bailey,Human,Inactive,West Michelle,CC-5665,Operations,Director of Ops,e70b24f5-055f-48f3-93f3-658175b1b8dd,8,-1,True
+a94fc550-f71f-4ce5-a097-acc1c05332e8,Daniel Quinn,Human,Inactive,North Jennastad,CC-8166,Engineering,QA Engineer,487221c2-6b5d-4bdc-8cd2-e4669f7633fc,8,-1,True
+734a2068-e3be-4206-8524-6190e5e9d0ed,Dean Turner,Human,Inactive,Lopezchester,CC-0397,Engineering,Architect,e44ff69f-6737-47eb-b3c4-6bebc7149ef2,8,-1,True
+45198783-f0cf-4a5b-a571-ecd8742f5a87,Madeline Fields,Human,Leave,East Alexisfort,CC-6564,Finance,Financial Analyst,78620d69-b8c6-4ac9-8fd5-553482a7fb04,8,-1,True
+f3cbb85c-50b1-49bb-a60a-dbf9b7e7bca9,Scott Silva,Human,Inactive,Ericstad,CC-0325,Sales,Sales Manager,844d9400-5599-4991-bc9d-e0d623814c52,8,-1,True
+03bd7d7f-51d6-4cde-b176-1ed4a1bca883,Katie Lane,Human,Leave,East Charlottestad,CC-2073,Finance,Controller,17d1bc04-eda3-433b-8a34-a08cec968617,8,-1,True
+cc3d619f-12c2-416a-b2dd-ee46dbefc91e,Martin Oconnell,Human,Leave,East Joseland,CC-5386,Product,Head of Product,3e65d7fa-07da-47f9-b8c3-cbec7e012705,8,-1,True
+d4021cef-6312-4e98-946d-18c927ee65a0,Eric Hunter,Human,Inactive,Millerport,CC-9582,Product,UX Designer,4a6e303e-cd25-40d0-9d6a-2f64447cbea6,8,-1,True
+6ca52c95-9ca8-4255-ac98-1417ff1caaf4,Elizabeth Castro,Human,Leave,North Martinport,CC-4727,Marketing,Designer,b745ff56-bda7-487e-8551-509a4497d087,8,-1,True
+a4e42f1d-8a1e-4284-894d-79903e1218ef,Christian Harrell,Human,Inactive,Veronicafort,CC-6316,Finance,Financial Analyst,e34b4fcf-3fef-425c-84fd-3f5bb906169e,8,-1,True
+022e1378-17e3-4a94-9602-1a83a5bf059d,Nicholas Ali,Human,Leave,Port Steven,CC-6015,Finance,Controller,9fb62a19-e970-4512-be45-d6067c41fc96,8,-1,True
+382fc17e-76f4-49bb-a11d-4d8ba05188e4,Kimberly Thomas,Human,Leave,Josephchester,CC-2257,Sales,Sales Ops,02dbecf4-510c-4532-b98e-31556a87c739,8,-1,True
+a7a3012b-f46e-40cf-8930-40a385b31254,Michael Serrano,Human,Leave,Christopherberg,CC-8654,Marketing,Marketing Manager,a3a81182-023d-4aa2-ab0e-d31747dd2827,8,-1,True
+7c84d1e1-5452-4270-8574-8fcbf3a5a16a,Mark Schmitt,Human,Inactive,North Connorbury,CC-1166,Finance,Financial Analyst,5c8cd79d-5aea-4aa6-87f7-a57200ba9a2e,8,-1,True
+3de3973f-357e-4708-8a59-96904eb02a51,Ann Peterson,Human,Inactive,West Cassandraton,CC-4463,Marketing,Marketing Specialist,93d22d77-c06a-4f17-9cb0-871c4f3ae0c5,8,-1,True
+f781d418-a094-4534-af47-b2851d9d6272,Holly Hoffman,Human,Leave,Port Emily,CC-9129,Engineering,Software Engineer,dcde086c-bbaf-478e-ae18-5ec5f86a0405,8,-1,True
+b997ee6b-3770-4907-8898-360ca397058b,Emma Chan,Human,Inactive,Port Kenneth,CC-1117,Legal,Legal Counsel,eff05db2-7366-411c-ac7f-ca1d75b7da69,8,-1,True
+841ad01b-7cb5-4403-8f83-322c187c1622,Susan Reed,Human,Leave,Leeport,CC-3577,Marketing,Marketing Specialist,d48d97a2-4e03-4146-a79f-1697192960fe,8,-1,True
+e4cf7864-40f3-4956-a7aa-8f8be1d2662a,Angel Butler,Human,Leave,West Jennifer,CC-4303,Operations,Director of Ops,6c38ea54-5c30-4750-b86f-1113a088c2cf,8,-1,True
+e65cbb1d-bcda-4475-b0bc-738bf4c8662f,svc_new_196,Service Account,Leave,Bakerview,CC-7730,HR,Benefits Coordinator,,8,-1,True
+5b4b6d4c-77f8-4b09-bfc2-5b19e2a42f91,Michelle Martinez,Human,Leave,Port Kevin,CC-6807,IT,Help Desk,7e3116e5-2ac6-4716-a8d0-2843f62125f6,8,-1,True
+ed4bdcc0-2e50-488c-844f-f3934c5efb43,Daniel Byrd,Human,Inactive,Lake Diane,CC-7619,Operations,Project Manager,0ce1cf0b-eb1e-4666-868a-cef6a7b924a0,8,-1,True
+026952d3-d563-413e-b2bd-34bf5ea5ae95,Megan Frazier,Human,Leave,Aprilhaven,CC-6622,Engineering,Engineering Manager,b68c6046-85c5-47bf-bb95-f6ae0641434e,8,-1,True
+dc252ee2-51cc-4914-9e78-d539c62eb15f,Melinda Cantu,Human,Inactive,Mcculloughchester,CC-9221,Legal,General Counsel,920055de-d738-4a11-9aa1-0e39aa74fc8b,8,-1,True
+e5ed8347-d0d2-4550-a196-0906d5b72288,Dennis Brown,Human,Leave,Juliaview,CC-0659,Operations,Analyst,1657918c-69ee-4123-84b0-9be6fe974cfa,8,-1,True
+aac9f4f7-9a34-4f90-a628-8832fbb7afbd,Wendy Pittman,Human,Leave,North Briannamouth,CC-1877,Product,Product Manager,3ddfd6a8-0bfc-47af-a36b-70582dbe9879,8,-1,True
+485b0438-06ef-41c3-af60-81d24b6e7a73,Randy Vaughn,Human,Inactive,East Kimberlyburgh,CC-6667,IT,SysAdmin,aeefcefe-5f9f-441f-ad78-72631c5ee7ba,8,-1,True
+2ef542df-22f1-4440-a6eb-71f2e556acf7,Christopher Bolton,Human,Inactive,South Davidton,CC-5661,Sales,Account Executive,8f979496-b833-4f42-9641-1da7ebcac759,8,-1,True
+7f08a22f-a1f8-4278-af2f-a945e694cca3,Emily Ingram,Human,Inactive,North Nicoleville,CC-8880,Sales,Sales Ops,46fef305-8526-49a2-9874-ae227c94266a,8,-1,True
+1ecb986a-1ed4-4e04-b289-4989599b63be,David Delgado,Human,Leave,Jonathanberg,CC-6746,Customer Support,Support Lead,c1e0e634-a8d9-4c68-ae98-bc8580d40f07,8,-1,True
+6986734e-0305-4fc0-afe5-69317ce02056,Lynn Holland,Human,Leave,Jacquelineport,CC-1789,HR,Benefits Coordinator,9577b76e-5461-42c2-9b1c-75c3b7d31861,8,-1,True
+f19db9f9-a88a-47e3-a8bb-b3e6d40780d2,Matthew Sanchez,Human,Leave,Lisaborough,CC-6944,Marketing,SEO Specialist,d967050f-4d5e-42fb-a9ec-303c7aeec563,8,-1,True
+c407feef-b130-4340-8ca5-1de76f007e2b,Erika Curry,Human,Inactive,Chapmanview,CC-7369,Marketing,Marketing Manager,2ec8963b-b4e8-484c-9942-a117ae4de466,8,-1,True
+18290d79-63fe-4197-8107-83f1c1b73b2a,Jessica Rojas,Human,Leave,Colonland,CC-0045,Customer Support,Support Agent,4666f2ac-8aa3-4653-a3c9-e5ff9b7af1bb,8,-1,True
+583366e6-e617-4350-b2bd-eb90ad44daa5,Kevin Kim,Human,Leave,East Marthachester,CC-6487,Customer Support,Technical Support,61e3a420-69f9-4019-a734-4147be911c7b,8,-1,True
+26508c57-5061-4d89-95ea-989739d03f96,Stephen Allen,Human,Leave,New Dianemouth,CC-4707,Product,UX Designer,ec8e3bcd-5c11-446f-abaf-89bad3f46fc4,8,-1,True
+60bd39ae-f3c0-499f-9e4d-4e0fa62fc236,James Brown,Human,Leave,Walkerborough,CC-0101,Legal,Legal Counsel,,8,-1,True
+4d4c377d-bd8a-45e4-b95a-931290b852b9,Megan Jones,Human,Leave,Meganshire,CC-2897,HR,Benefits Coordinator,c7db4b41-b339-4233-b3cc-3d3332850464,8,-1,True
+129a3a0b-3450-40a2-9ab6-06c6c83f0d74,Vanessa Barber,Human,Inactive,New Jose,CC-0142,IT,Network Engineer,,8,-1,True
+7f8e27cb-75d4-4d64-9f04-4c52ad6d777c,Wanda Chavez,Human,Leave,Port Samantha,CC-5753,Legal,Paralegal,d478dde6-479f-482e-8af0-41bde9d1a3c5,8,-1,True
+58f3bfdf-5433-4f90-a4a8-f466e3aadcf9,Janet Shields,Human,Leave,Feliciaside,CC-1835,HR,HR Manager,f2086927-88ce-4178-9c30-db87f5a1b821,8,-1,True
+8944116c-34fa-46d9-8c1d-080e681733e0,Sherry Cook,Human,Inactive,Petersonchester,CC-3166,Product,Product Owner,eb4bbf94-b080-40f8-acfc-a5321de283de,8,-1,True
+0569d75e-9dc4-4126-9c2b-335cc9093682,Autumn Moore,Human,Inactive,Mendezville,CC-4732,Engineering,DevOps Engineer,,8,-1,True
+667c7a97-3e12-4062-979d-b451f19513c5,Dana King,Human,Leave,West Joel,CC-5880,Product,Head of Product,9a9b4391-e052-4e8e-9e8a-a39950a9d782,8,-1,True
+832179df-ab2d-4508-886e-45d68182cbe5,Cynthia Gilbert,Human,Inactive,Port Christopher,CC-9128,Product,Product Owner,9b49fc39-a02b-49a8-a8e1-e1867646c09e,8,-1,True
+da672ae6-14cb-4d27-8b3a-64d4b07cb7ce,Jennifer Johnson,Human,Inactive,Stephaniebury,CC-5677,Finance,Finance Manager,e79ec0b9-0d58-4b39-afda-7872ac521613,8,-1,True
+025738f0-555e-4cd9-8d69-5243c6c2cd51,Craig Salinas,Human,Leave,Roberthaven,CC-9487,HR,Recruiter,a9daa199-9965-4635-8047-3d03e7837d0b,8,-1,True
+89b63e87-8c2e-4e49-8a5f-9ceadcf30a74,Steven Rivera,Human,Leave,South Jordan,CC-0587,Engineering,Architect,d755601f-32f1-4378-a86a-9dcc062b22d3,8,-1,True
+4cde8c65-d209-42c1-bb48-1ecd30320b27,Philip Fuller,Human,Leave,Zoeland,CC-6790,Customer Support,Support Agent,a786e80b-77b4-4880-9cea-35fb320b3a94,8,-1,True
+d73af842-f503-4646-96a1-ca141bc0506e,Joshua Kramer,Human,Inactive,Port Kimberlyshire,CC-7875,Operations,Ops Manager,00d57bc2-235c-4b1b-8cd6-f9e6aaa194d8,8,-1,True
+7ad34f4a-2c9a-441a-bf76-d4826eb0e204,Benjamin Collins,Human,Inactive,Lake Peterview,CC-6765,IT,Help Desk,,8,-1,True
+05ffee9e-a977-4b36-ac56-8170483f879e,Julie James,Human,Inactive,Justinfort,CC-4430,Legal,Legal Counsel,,8,-1,True
+8755464a-6e79-402d-9fa8-997780db920b,Stephen Nunez,Human,Inactive,Wrightville,CC-5632,Legal,Compliance Officer,,8,-1,True
+38419074-4198-4a6b-ab15-6280d069a5bf,Walter Sutton DVM,Human,Inactive,Juliaberg,CC-9678,Legal,Contract Manager,08dc8b6c-ba71-4297-8baf-09f2e7f8483c,8,-1,True
+3db115c8-4f78-432b-b7bd-092c93362d7e,Lee Rodriguez,Human,Leave,Wendyfurt,CC-6199,Product,UX Designer,ac8a6d74-ab07-4da5-ab93-a9773842e75c,8,-1,True
+ee017134-dd93-4f8c-96a2-4fffde96c442,Ashley Beck,Human,Leave,Josephland,CC-1171,IT,Help Desk,,8,-1,True
+358ad84e-9ec5-45f6-8ac3-e51023898111,svc_dark_711,Service Account,Leave,Rivastown,CC-5752,Operations,Director of Ops,ad6d1b2d-f1f8-4031-be9a-2087f3c9c2e4,8,-1,True
+943e810d-5d25-4b10-afda-6d990442481d,Ashley Everett,Human,Inactive,Lake Adam,CC-2343,IT,Help Desk,1d2e4299-81ae-495e-895c-9d42e3462154,8,-1,True
+c7e1cce8-9cec-4e3c-a274-71665e6c329f,Jacqueline Jones,Human,Leave,Port Christinashire,CC-2299,Operations,Project Manager,156458b3-480d-41b8-85b7-ab38dbfddaf7,8,-1,True
+fb821603-6e21-4588-9996-17b00a98c29d,Shelley Jones,Human,Leave,Jeremyborough,CC-3788,Customer Support,Success Manager,5a07bbb1-867e-433c-8a9b-6cbb832c5988,8,-1,True
+8d817f03-8f89-4041-ad9c-144ca85cdb4d,Robin Jones,Human,Inactive,Lake Patrickmouth,CC-6671,Sales,Account Executive,31736bd8-29de-47f7-be00-fd28692369b1,8,-1,True
+a21da41e-fef4-4cf7-aa10-787de2d6f9a5,Alvin Castillo,Human,Leave,North Christopherland,CC-9618,Sales,Account Executive,,8,-1,True
+fc53690e-d744-41a5-bf93-e185d0c146f0,Brian Richardson,Human,Leave,Lake Meganburgh,CC-4441,Customer Support,Support Lead,54100d5b-eaba-409d-b6b0-f41e601cf711,8,-1,True
+f593d511-ec45-4695-8264-a1b891c3faa8,Paul Grant,Human,Leave,Madisonville,CC-6370,Engineering,Engineering Manager,65ace26a-a389-415e-94fb-55eb0b81ca2b,8,-1,True
+150bcf42-411f-474c-8162-34695ccb5782,Clinton Gray,Human,Leave,Gonzalezton,CC-4114,Legal,Legal Counsel,849b429c-279b-47c5-8438-c9286ae0baad,8,-1,True
+c6ee0559-3f61-42a1-b18d-d8c7c34f8066,Felicia Houston,Human,Inactive,North Lisaberg,CC-6498,Operations,Ops Manager,7db24194-1255-466c-8984-7731fe408e6d,8,-1,True
+54924cb0-b128-413c-baba-eac703027513,svc_skill_825,Service Account,Inactive,Williammouth,CC-6366,Sales,Sales Manager,685b465f-96f1-436f-9764-ff32a87aed18,8,-1,True
+ba3ef364-4901-4ec6-90b7-083cd5c97a8c,Jeremy Hoffman,Human,Leave,West Susanview,CC-8301,Finance,Finance Manager,da07aa27-7566-4840-bfe7-ae7264e62d73,8,-1,True
+859d95e0-f16d-4965-b357-4c094ab13031,Gwendolyn Ortiz,Human,Inactive,West Chelseafort,CC-4988,Customer Support,Support Agent,0d99aa6c-3b89-42c7-bb6b-89ad6b7f9297,8,-1,True
+acdbd5d4-9674-41d1-9130-de6f53c040ec,Tara Chen,Human,Inactive,Port Donna,CC-2068,Customer Support,CS Manager,,8,-1,True
+c350be31-977a-4b3b-b1ee-bf91f62de122,Zachary Castillo,Human,Inactive,North Michael,CC-0081,IT,SysAdmin,5cf9b95b-24ac-497c-9932-b71461b67e80,8,-1,True
+9726cff4-880d-4c99-b3b4-c3540836481c,Valerie Smith,Human,Inactive,Lindseychester,CC-8644,Marketing,Marketing Specialist,620c5500-84e6-46df-b3f7-8431864465c8,8,-1,True
+849854cc-d3d4-408c-890a-8be07ff541f4,Sarah Fisher,Human,Leave,Hunterborough,CC-8780,Product,Business Analyst,e692a348-7595-459f-8b98-f3e1e46767e8,8,-1,True
+50bb1ed9-0186-4e8c-a7ec-48ceb2415052,Christopher Davis,Human,Leave,Robertside,CC-3982,HR,Benefits Coordinator,d0770b1a-8018-418d-9bc6-ba633771cf77,8,-1,True
+f22529ac-3442-4111-b605-e88f9b8d6d98,Holly Hamilton,Human,Inactive,South Stacyview,CC-1549,Product,Product Owner,de700faa-2c15-41b5-a531-108fc1dd0f14,8,-1,True
+2290b80e-61a4-42f9-952e-b2d312582f48,Michelle Nguyen,Human,Inactive,West Richardport,CC-1752,Customer Support,CS Manager,34dff849-7203-4bb7-b21c-ec41b1d75602,8,-1,True
+438cf379-86fb-4d28-872a-9466a98ac7b5,Jordan Walls,Human,Inactive,West Kellyfurt,CC-0558,Legal,General Counsel,90bb572b-762c-4fd3-bf0a-ff5b989eee41,8,-1,True
+b9a838ea-8a89-4f56-92de-b396a67d0fba,svc_particular_675,Service Account,Leave,Greeneport,CC-1302,Operations,Logistics Coordinator,93d3a8ec-e7c2-4da0-ab38-a445e9d90751,8,-1,True
+dcb36a44-b755-4174-a2cf-1ffdb4d90c04,Mark Weber,Human,Leave,Taylortown,CC-9584,Product,Business Analyst,c7c75021-703c-48f4-a13b-30f62b43c1fe,8,-1,True
+1a843345-db80-4622-8893-271012151ec4,Jeremy Weeks,Human,Leave,Melaniechester,CC-8458,Legal,Contract Manager,481499dc-b7ab-49f3-b2ad-472cbd43aa0e,8,-1,True
+a9fdfcf0-96c5-4bdd-b558-72442671942e,Matthew Pena,Human,Leave,Claytonside,CC-9773,Engineering,QA Engineer,fd73a342-ef54-479d-b8f6-da7169ca773f,8,-1,True
+12b6c4ec-9e33-43b3-91b7-ad22b78c6931,Robert Perez,Human,Leave,Kimberlyburgh,CC-9247,Legal,Paralegal,32fe2cb4-2b49-4b47-894c-fecb5060d547,8,-1,True
+b2aab786-c500-40c0-b5d7-fbccea905b35,svc_suggest_496,Service Account,Inactive,New Chrisville,CC-4993,Operations,Logistics Coordinator,8729cd2a-09bf-477d-8d15-beb91c8a0eee,8,-1,True
+effa5215-c2b7-462e-84f2-c573a6d7ca68,Kaitlyn Brown,Human,Inactive,Ashleyview,CC-1149,Sales,Sales Representative,,8,-1,True
+58a1c441-9f27-4e03-9fdf-9b5515fa0c37,Amanda Shepard,Human,Leave,Whiteheadfurt,CC-9717,Customer Support,Success Manager,f17d2685-838e-4938-83ec-d6120f58e417,8,-1,True
+e7169770-912f-443a-b93c-081ff183ade2,Tiffany Schneider,Human,Inactive,East Mitchell,CC-8217,IT,Network Engineer,a5b9d094-bc4c-4033-8032-83ea0b2f0f86,8,-1,True
+1571f45a-4d21-43bb-9f1f-0497be654d42,Danielle Mcpherson,Human,Inactive,Port Joelville,CC-0912,Operations,Logistics Coordinator,e113a2f8-edf7-4489-8fdf-b55e5d3a8f79,8,-1,True
+fec139b7-3668-42be-ad7c-3b4b66463551,Matthew Brown,Human,Inactive,Port Donald,CC-2571,Marketing,Marketing Specialist,d72b6119-6e36-442f-98d2-76ddbd38d2fa,8,-1,True
+9a5e6706-de4b-4303-89a6-670816dc028b,Joseph Hall,Human,Leave,Lake Hannah,CC-2334,Legal,Compliance Officer,f1640ee7-c46e-43f4-86d7-631a58d3a506,8,-1,True
+3005d013-04b7-43d8-ab47-8cd15ec5855d,Cheryl Harrington PhD,Human,Leave,Jerryhaven,CC-3353,Engineering,Engineering Manager,03b1549d-aeb1-423f-8100-8fcac765a975,8,-1,True
+e74a246c-d8c5-4142-b06c-7cc5ac2854e8,Michele Villanueva,Human,Inactive,Escobartown,CC-5405,HR,HR Manager,ad5aea54-d396-4fa7-8eb6-d8d05c728839,8,-1,True
+a57360a7-17a7-4ec6-af47-5c4680381a47,Kurt Hurley,Human,Inactive,Dominguezmouth,CC-4130,IT,SysAdmin,27c40890-75cc-40b4-8bc5-7cd4c1e7d148,8,-1,True
+f72407a2-4dfa-47b1-93a1-8eeef17a2875,Louis Parsons,Human,Inactive,Port James,CC-2022,Finance,Finance Manager,6aa19e3c-0cca-4f70-9a77-b95b35800f3a,8,-1,True
+95ebad64-b27b-4e4e-bd0a-3c4fc5881c27,Jasmine Pugh,Human,Leave,Charlesland,CC-4479,Product,Business Analyst,206b92da-7b94-4964-b60a-558e73278f33,8,-1,True
+d6b77660-fd55-4192-9606-44fda750002f,svc_image_734,Service Account,Inactive,Orrburgh,CC-0499,Finance,Financial Analyst,7c3d0ab7-999a-4c15-b048-5494398c5b42,8,-1,True
+75fd74d9-ffe8-4433-b797-31bb8de4dbca,Nicholas Jones,Human,Leave,East Scottbury,CC-4543,Operations,Logistics Coordinator,987733bb-752f-45bd-aaa1-51f0fd9ce15c,8,-1,True
+90717450-8ac4-461f-a704-86d917d6aed3,George Richmond,Human,Inactive,Thomasmouth,CC-9958,Product,UX Designer,1235b581-08e2-4a4f-a5da-1658e54494fa,8,-1,True
+be1bcf64-1aa5-4f74-91a2-ca4590037922,Dylan Miller,Human,Inactive,Jessicaview,CC-9166,Sales,Sales Manager,11800926-5549-459b-b222-51eb4abfd529,8,-1,True
+ad0c34d0-f0dc-49b8-a125-5f6335c16cfc,Mr. Richard Hogan,Human,Inactive,South Andrew,CC-7322,Marketing,SEO Specialist,db7c7609-a4ca-4a37-baef-1228cb929c1a,8,-1,True
+1245272a-92a5-4780-9894-97ff7eac0c2f,Jennifer Williams,Human,Inactive,Samuelhaven,CC-6188,IT,SysAdmin,42e36ce0-508a-44c9-89f8-a6516b139622,8,-1,True
+d5da7054-c692-43d1-a948-f63b458d4c7b,Dr. Jamie Monroe MD,Human,Leave,East Amandatown,CC-2884,IT,Network Engineer,ec835a8e-943e-4ca0-a380-20a470b7615a,8,-1,True
+0bbe74dc-df9f-464a-8aef-a25548dda4cd,Molly Macdonald,Human,Leave,Jennifertown,CC-5744,Sales,Sales Representative,7a3391a1-b8c8-4fc6-b2b0-12e3729b5662,8,-1,True
+9c0b737c-268f-4c80-a5a2-4f90a2bccc18,Kelly Hernandez,Human,Leave,Lake Tammyburgh,CC-1715,Marketing,Marketing Manager,5e5f21c5-fb1a-4138-a467-e2cdfdf31995,8,-1,True
+ed65ce4c-f535-4416-ab90-311c6f8f57aa,Pamela Klein,Human,Inactive,Riveraview,CC-5909,Marketing,SEO Specialist,a443252b-aec9-4b57-a8b2-aae35a7f0222,8,-1,True
+708d6b90-4690-4731-b756-007e8a221683,Kelly Jackson,Human,Inactive,Shawnland,CC-5575,Legal,General Counsel,95b6373f-2577-44e6-8479-c5034bb1a773,8,-1,True
+85574c03-e1b3-4f7e-b805-5ecf2364b37b,Angelica Peters,Human,Leave,Russellport,CC-1113,Customer Support,Success Manager,e0acfdaa-5d92-4573-9f90-13494142b5f0,8,-1,True
+789e9548-66cc-4a4d-937e-c6447dd6d10e,Mary Farrell,Human,Leave,Cooperburgh,CC-5916,Marketing,SEO Specialist,6df52b80-23f8-44b1-9dc9-1ba699c728ea,8,-1,True
+f1eca3cb-ce68-4507-a423-e049bd4907d3,Jennifer Garza,Human,Leave,Valdezville,CC-2925,Customer Support,Support Agent,d8a4e628-4b3d-4e25-98a4-3e34bea4c200,8,-1,True
+f0d39ac3-115d-451e-b143-783297a1ad88,Barbara Smith,Human,Inactive,West Elizabeth,CC-0566,Customer Support,Technical Support,8edb5307-a06c-44d1-81c1-c68b58659436,8,-1,True

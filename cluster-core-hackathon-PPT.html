@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cluster Core - IAM Hackathon One-Pager</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #f4f6f9;
+            --page-bg: #ffffff;
+            --text-main: #1f2937;
+            --text-muted: #4b5563;
+            --accent: #0033A0;
+            /* State Street Blue */
+            --accent-light: #e0f2fe;
+            --border-color: #e5e7eb;
+            --card-bg: #ffffff;
+            --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 51, 160, 0.05), 0 10px 10px -5px rgba(0, 51, 160, 0.02);
+            --danger: #dc2626;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--bg-color);
+            color: var(--text-main);
+            overflow-x: hidden;
+            border-top: 6px solid var(--accent);
+        }
+
+        .page-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+
+        .page {
+            background: var(--page-bg);
+            border-radius: 12px;
+            padding: 50px;
+            margin-bottom: 40px;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border-color);
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header {
+            text-align: center;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 30px;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 3.5em;
+            margin-bottom: 15px;
+            color: var(--accent);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+
+        .header .tagline {
+            font-size: 1.6em;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        .header .meta {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            font-size: 1.05em;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .header .meta span {
+            background: var(--accent-light);
+            color: var(--accent);
+            border: 1px solid rgba(0, 51, 160, 0.1);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .section {
+            background: var(--card-bg);
+            border-radius: 8px;
+            padding: 25px;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .section.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .section h2 {
+            color: var(--accent);
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section h3 {
+            color: var(--text-main);
+            font-size: 1.3em;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .section p,
+        .section li {
+            line-height: 1.7;
+            font-size: 1.05em;
+            color: var(--text-muted);
+        }
+
+        .section strong {
+            color: var(--text-main);
+            font-weight: 600;
+        }
+
+        .section ul,
+        .section ol {
+            padding-left: 0;
+        }
+
+        .section ul li {
+            padding-left: 20px;
+            position: relative;
+            margin: 8px 0;
+            list-style: none;
+        }
+
+        .section ul li:before {
+            content: "■";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-size: 0.7em;
+            top: 0.4em;
+        }
+
+        .highlight-box {
+            background: #f8fafc;
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--accent);
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 6px;
+        }
+
+        .use-cases {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .use-case {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 25px;
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .use-case:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 51, 160, 0.4);
+            box-shadow: 0 10px 20px rgba(0, 51, 160, 0.08);
+        }
+
+        .use-case .number {
+            font-size: 2em;
+            color: var(--accent);
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .use-case h4 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            color: var(--text-main);
+            font-weight: 700;
+        }
+
+        .use-case p {
+            font-size: 1em;
+            line-height: 1.6;
+            color: var(--text-muted);
+        }
+
+        .io-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 15px 0;
+        }
+
+        .io-box {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            border-left: 3px solid var(--accent);
+        }
+
+        .io-box h5 {
+            color: var(--accent);
+            font-size: 0.95em;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 700;
+        }
+
+        .io-box ul {
+            font-size: 0.9em;
+        }
+
+        .io-box li {
+            margin: 4px 0;
+            padding-left: 15px;
+        }
+
+        .io-box li:before {
+            content: "→";
+            font-size: 1.1em;
+            top: -0.1em;
+        }
+
+        .metrics {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .metric {
+            text-align: center;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
+            padding: 30px;
+            border-radius: 8px;
+            flex: 1;
+        }
+
+        .metric .value {
+            font-size: 2.8em;
+            color: var(--accent);
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .metric .label {
+            font-size: 1.05em;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .architecture {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin: 25px 0;
+            flex-wrap: wrap;
+        }
+
+        .arch-box {
+            background: #ffffff;
+            border: 2px solid var(--accent);
+            padding: 15px 25px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 0.95em;
+            color: var(--accent);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .arch-arrow {
+            font-size: 1.5em;
+            color: var(--text-muted);
+            font-weight: 300;
+        }
+
+        .formula {
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 6px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.95em;
+            margin: 15px 0;
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            font-weight: 600;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 0.95em;
+            background: var(--card-bg);
+        }
+
+        th,
+        td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            background: #f8fafc;
+            color: var(--text-main);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.85em;
+            letter-spacing: 0.5px;
+        }
+
+        td {
+            color: var(--text-muted);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px;
+            border-top: 2px solid var(--border-color);
+            margin-top: 40px;
+        }
+
+        .footer .cta {
+            background: var(--accent);
+            color: #ffffff;
+            padding: 18px 40px;
+            border-radius: 8px;
+            font-size: 1.3em;
+            font-weight: 600;
+            display: inline-block;
+            margin: 20px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 51, 160, 0.3);
+            cursor: pointer;
+        }
+
+        .footer .cta:hover {
+            background: #002277;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 51, 160, 0.4);
+        }
+
+        .badge {
+            display: inline-block;
+            background: var(--accent-light);
+            color: var(--accent);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            margin: 4px;
+            border: 1px solid rgba(0, 51, 160, 0.15);
+            font-weight: 600;
+        }
+
+        .nav-buttons {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            z-index: 1000;
+        }
+
+        .nav-btn {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 12px 24px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            text-align: center;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-btn:hover {
+            background: var(--accent-light);
+            border-color: var(--accent);
+            color: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0, 51, 160, 0.15);
+        }
+
+        @media print {
+            body {
+                background: white;
+                border-top: none;
+            }
+
+            .page-container {
+                padding: 0;
+            }
+
+            .page {
+                page-break-after: always;
+                box-shadow: none;
+                border: none;
+                padding: 20px;
+                margin-bottom: 0;
+            }
+
+            .nav-buttons {
+                display: none !important;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .use-cases {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav-buttons">
+        <a class="nav-btn" href="#page1">📄 Overview</a>
+        <a class="nav-btn" href="#page2">🎯 Details</a>
+        <a class="nav-btn" onclick="window.print()">🖨️ Print/PDF</a>
+    </div>
+
+    <div class="page-container">
+        <!-- PAGE 1: EXECUTIVE OVERVIEW -->
+        <div class="page" id="page1">
+            <div class="header">
+                <div style="margin-bottom: 1.5rem;">
+                    <!-- Insert state street logo if they provided it, else plain text -->
+                    <img src="frontend/statestreetlogo.webp" alt="State Street Logo" style="max-height: 100px;">
+                </div>
+                <h1>Cluster Core</h1>
+                <div class="tagline">Proactive Identity Governance with Peer-Group Intelligence</div>
+                <div class="meta">
+                    <span>Innovators: Teja, Varsha, Srivanth, Hitesh, Neeraj, Ranjith</span>
+                    <span>Track: Identity Governance & Automation</span>
+                    <span>March 2026</span>
+                </div>
+            </div>
+
+            <!-- Problem & Solution -->
+            <div class="content-grid">
+                <div class="section">
+                    <h2>🔍 The Problem</h2>
+                    <p><strong>Domain:</strong> Identity Governance & Administration (IGA)</p>
+                    <p><strong>Personas:</strong> Audit/Risk, App Owners, BU Owners, Line Managers</p>
+                    <div class="highlight-box">
+                        Organizations face <strong>fragmented ecosystems</strong> that hinder advanced analysis and
+                        proactive management of identity and access. <strong>Manual processes</strong> and
+                        <strong>siloed data sources</strong> slow down access reviews, threaten compliance, and expose
+                        the enterprise to risk.
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>💡 Our Solution</h2>
+                    <p>Using <strong>machine learning</strong> on centralized identity and access data, we build
+                        actionable insights that enable:</p>
+                    <ul>
+                        <li><strong>Proactive detection</strong> of unusual behavior</li>
+                        <li><strong>Validation of role assignments</strong> via peer clustering</li>
+                        <li><strong>Verification of provisioned access</strong> within the organization</li>
+                        <li><strong>Threat vector mapping</strong> for vulnerable pathways</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Three Use Cases -->
+            <div class="section full-width">
+                <h2>🎯 Three Powerful Use Cases</h2>
+                <div class="use-cases">
+                    <div class="use-case">
+                        <div class="number">1️⃣</div>
+                        <h4>Manager Access Review</h4>
+                        <p>Generate <strong>confidence scores (0-100%)</strong> for access decisions using peer-group
+                            clustering comparison.</p>
+                        <div class="io-grid">
+                            <div class="io-box">
+                                <h5>📥 Inputs</h5>
+                                <ul>
+                                    <li>Identity Attributes</li>
+                                    <li>Entitlements</li>
+                                    <li>Peer Cluster</li>
+                                </ul>
+                            </div>
+                            <div class="io-box">
+                                <h5>📤 Outputs</h5>
+                                <ul>
+                                    <li>Score 0-100%</li>
+                                    <li>Recommendation</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p style="margin-top: 10px; font-size: 0.9em;"><strong>Impact:</strong> 40-50% faster reviews
+                            for high-confidence items.</p>
+                    </div>
+
+                    <div class="use-case">
+                        <div class="number">2️⃣</div>
+                        <h4>New Joiner Suggestions</h4>
+                        <p>Recommend <strong>access items</strong> based on peer-group cluster membership for rapid
+                            onboarding.</p>
+                        <div class="io-grid">
+                            <div class="io-box">
+                                <h5>📥 Inputs</h5>
+                                <ul>
+                                    <li>Role, Department</li>
+                                    <li>Location</li>
+                                    <li>Job Title</li>
+                                </ul>
+                            </div>
+                            <div class="io-box">
+                                <h5>📤 Outputs</h5>
+                                <ul>
+                                    <li>Access bundle</li>
+                                    <li>Rationale</li>
+                                    <li>Confidence Score</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p style="margin-top: 10px; font-size: 0.9em;"><strong>Impact:</strong> Reduce
+                            time-to-productivity for new hires.</p>
+                    </div>
+
+                    <div class="use-case">
+                        <div class="number">3️⃣</div>
+                        <h4>User Anomaly Report</h4>
+                        <p>Identify users who <strong>don't fit any cluster</strong>—pure outliers and edge cases
+                            requiring scrutiny.</p>
+                        <div class="io-grid">
+                            <div class="io-box">
+                                <h5>📥 Inputs</h5>
+                                <ul>
+                                    <li>Cluster models</li>
+                                    <li>Identities</li>
+                                    <li>Entitlements</li>
+                                </ul>
+                            </div>
+                            <div class="io-box">
+                                <h5>📤 Outputs</h5>
+                                <ul>
+                                    <li>Anomaly list</li>
+                                    <li>Weightage</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p style="margin-top: 10px; font-size: 0.9em;"><strong>Impact:</strong> 100% automated anomaly
+                            detection pipeline.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Metrics -->
+            <div class="section full-width">
+                <h2>📊 Value & Impact</h2>
+                <div class="metrics">
+                    <div class="metric">
+                        <div class="value">2-3 mo</div>
+                        <div class="label">Timeline to production</div>
+                    </div>
+                    <div class="metric">
+                        <div class="value">~$20K-30K</div>
+                        <div class="label">Additional budget required (IDA Funded)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Architecture Overview -->
+            <div class="content-grid">
+                <div class="section">
+                    <h2>🏗️ Solution Stack</h2>
+                    <div class="architecture">
+                        <!-- Removed dark mode background colors, added specific corporate light backgrounds -->
+                        <div class="arch-box" style="background: #e0f2fe; border-color: #0284c7; color: #0284c7;">
+                            Entitlement Central<br>(IGA)</div>
+                        <div class="arch-arrow">→</div>
+                        <div class="arch-box" style="background: #dcfce7; border-color: #16a34a; color: #16a34a;">Spring
+                            Boot<br>& FastAPI</div>
+                        <div class="arch-arrow">→</div>
+                        <div class="arch-box" style="background: #fef08a; border-color: #ca8a04; color: #ca8a04;">AWS
+                            SageMaker, <br>AWS Bedrock</div>
+                        <div class="arch-arrow">→</div>
+                        <div class="arch-box" style="background: #f3e8ff; border-color: #9333ea; color: #9333ea;">Rules
+                            Insights & <br>Reports</div>
+                    </div>
+                    <p style="margin-top: 15px;"><strong>ML Algorithms Utilized:</strong></p>
+                    <div style="margin-top: 10px;">
+                        <span class="badge">K-Means Clustering</span>
+                        <span class="badge">DBSCAN Anomaly Detection</span>
+                        <span class="badge">TruncatedSVD Matrix Reduction</span>
+                        <span class="badge">Heuristic Adoption Logic</span>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>🎯 Success Metrics</h2>
+                    <ul>
+                        <li><strong>Review Completion Time:</strong> Dramatic reduction in manual manager hours.</li>
+                        <li><strong>Audit Findings Reduction:</strong> Highly accurate approvals driven by peer norms.
+                        </li>
+                        <li><strong>Outlier Reports:</strong> Users who don't fit clusters instantly flagged for risk.
+                        </li>
+                        <li><strong>Security:</strong> Reduction in excessive "birthright" access creep.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer CTA -->
+            <div class="footer">
+                <h2 style="color: var(--accent); font-size: 2em; margin-bottom: 20px;">Key Takeaways</h2>
+                <p style="font-size: 1.2em; margin-bottom: 20px; color: var(--text-main);">
+                    Transform identity governance from <strong>reactive to proactive</strong> using peer-group
+                    intelligence, clustering, and anomaly detection. Deliver confidence scores for reviews, smart
+                    suggestions for new joiners, and automated risk detection.
+                </p>
+                <div class="cta">
+                    🚀 Pilot Cluster Core with IGA to demonstrate immediate value
+                </div>
+            </div>
+        </div>
+
+        <!-- PAGE 2: TECHNICAL DETAILS -->
+        <div class="page" id="page2">
+            <div class="header">
+                <h1>Cluster Core: Technical Deep Dive</h1>
+                <div class="tagline">Implementation Details & Methodology</div>
+            </div>
+
+            <!-- Confidence Score Formula -->
+            <div class="section full-width">
+                <h2>🧮 Confidence Scoring: Peer Adoption Lift</h2>
+                <p>Multi-factor analysis providing robust, mathematical, and explainable assessments:</p>
+                <div class="formula">
+                    <strong>Confidence / Validation Logic:</strong><br>
+                    Confidence Score = (Cluster Holders / Total Cluster Population) * 100<br>
+                    Global Lift = Peer Adoption Rate / Global Company Adoption Rate
+                </div>
+                <div class="content-grid">
+                    <div>
+                        <h3>🎯 Peer Adoption Rate</h3>
+                        <p>Evaluates the exact frequency of an entitlement natively within the dynamically generated
+                            K-Means group.</p>
+                        <h3>📊 Global Lift</h3>
+                        <p>Measures how unique the access is to the peer group vs the entire enterprise (e.g. 2.0x more
+                            common locally).</p>
+                    </div>
+                    <div>
+                        <h3>⚠️ Anomaly Flags</h3>
+                        <p>DBSCAN assigns '-1' density markers to users who share no clear mathematical similarity with
+                            any peers.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Approach -->
+            <div class="content-grid">
+                <div class="section">
+                    <h2>🤖 ML Approach Overview</h2>
+                    <h3>Clustering Algorithm</h3>
+                    <ol style="list-style: decimal; padding-left: 20px; color: var(--text-muted);">
+                        <li>Extract contextual HR features (department, job_title, location).</li>
+                        <li>Normalize & encode entitlements into a Binary Access Sparse Matrix.</li>
+                        <li>Apply dimensionality reduction via TruncatedSVD (100 components).</li>
+                        <li>Cluster using K-Means (Iterative Silhouette Scoring).</li>
+                        <li>Scan for outliers using Density-Based Spatial Clustering (DBSCAN).</li>
+                    </ol>
+                    <h3 style="margin-top: 15px;">Models Used</h3>
+                    <ul>
+                        <li><strong>K-Means:</strong> Group users dynamically by access/HR patterns.</li>
+                        <li><strong>DBSCAN:</strong> Identify irregular groups and unique outliers.</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>🔧 Data Engineering</h2>
+                    <ul>
+                        <li><strong>Contextual:</strong> One-Hot Encoded HR metadata.</li>
+                        <li><strong>Behavioral:</strong> Sparse aggregation of User &lt;-&gt; Entitlement arrays.</li>
+                        <li><strong>Aggregates:</strong> High-risk counts, Total access counts (StandardScaled).</li>
+                    </ul>
+                    <h3>Model Inference Flow</h3>
+                    <ul>
+                        <li>Export models via Joblib tracking properties.</li>
+                        <li>FastAPI intercepts User JSON inference requests.</li>
+                        <li>Map to matrix template, Scale, Reduce, and Cluster in real-time.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Example Scenarios -->
+            <div class="section full-width">
+                <h2>📌 ML Insight Scenarios</h2>
+                <div class="content-grid">
+                    <div class="highlight-box">
+                        <h3 style="color: var(--accent);">Use Case 1 Example: Low Confidence</h3>
+                        <p><strong>Employee:</strong> Sarah Chen (Software Engineer II)</p>
+                        <p><strong>Entitlement:</strong> Production Database Admin Access</p>
+                        <p><strong>Confidence Score:</strong> <strong
+                                style="color: var(--danger); font-size: 1.25em;">23%</strong></p>
+                        <p><strong>Reason:</strong> Only 23% of engineers in her peer cluster have this access, and Lift
+                            is &lt; 1.0.</p>
+                        <p><strong>Recommendation:</strong> Escalate for detailed manual review.</p>
+                    </div>
+                    <div class="highlight-box">
+                        <h3 style="color: var(--accent);">Use Case 2 Example: New Joiner Inference</h3>
+                        <p><strong>New Hire:</strong> Alex Kumar (Business Analyst - Finance)</p>
+                        <p><strong>Predicted Cluster:</strong> #14 (Finance Power-Users)</p>
+                        <p><strong>Recommended Access:</strong></p>
+                        <ul>
+                            <li>SAP Reporting <strong style="color: #16a34a;">(95% confidence)</strong></li>
+                            <li>Tableau Viewer <strong style="color: #16a34a;">(87% confidence)</strong></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3 style="margin-top: 25px; margin-bottom: 10px;">Use Case 3 Example: Anomaly Detection</h3>
+                <div style="overflow-x: auto;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>User</th>
+                                <th>Role</th>
+                                <th>Model Tag</th>
+                                <th>Reasoning Matrix</th>
+                                <th>Recommended Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>J. Smith</strong></td>
+                                <td>DevOps Engineer</td>
+                                <td><span class="badge"
+                                        style="background:var(--danger); color:#fff; border:none;">DBSCAN Label
+                                        -1</span></td>
+                                <td>Orphaned access matrix, no peer similarity</td>
+                                <td>Manual security review & Revocation</td>
+                            </tr>
+                            <tr>
+                                <td><strong>M. Johnson</strong></td>
+                                <td>Business Analyst</td>
+                                <td><span class="badge"
+                                        style="background:#fef08a; color:#ca8a04; border:none;">Sub-Cluster</span></td>
+                                <td>High-risk entitlement counts exceed scaled norm</td>
+                                <td>Validate Risk Exemption with manager</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Technical Deep Dive & Scaling -->
+            <div class="section full-width" id="tech-pipeline">
+                <h2>⚙️ Technical Deep Dive & Scaling</h2>
+                <div class="content-grid" style="margin-top: 20px;">
+                    <div style="grid-column: 1 / -1;">
+                        <h3 style="color: var(--accent); margin-bottom: 20px;">The Data-to-UI Pipeline</h3>
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: stretch; gap: 1rem; margin-bottom: 2rem;">
+                            <div class="io-box" style="flex: 1; text-align: center;">
+                                <h5>1. Data Ingestion</h5>
+                                <p style="font-size: 0.85em;">Parquet Files<br>HR Metadata<br>Access Logs</p>
+                            </div>
+                            <div style="display: flex; align-items: center; color: var(--accent); font-weight: bold;">→
+                            </div>
+                            <div class="io-box" style="flex: 1; text-align: center;">
+                                <h5>2. ML Pipeline</h5>
+                                <p style="font-size: 0.85em;">Feature Eng (One-Hot)<br>SVD Reduction<br>K-Means/DBSCAN
+                                </p>
+                            </div>
+                            <div style="display: flex; align-items: center; color: var(--accent); font-weight: bold;">→
+                            </div>
+                            <div class="io-box" style="flex: 1; text-align: center;">
+                                <h5>3. Storage Layer</h5>
+                                <p style="font-size: 0.85em;">PoC: SQLite<br>Prod: RDS (Aurora)<br>Redis (Cache)</p>
+                            </div>
+                            <div style="display: flex; align-items: center; color: var(--accent); font-weight: bold;">→
+                            </div>
+                            <div class="io-box" style="flex: 1; text-align: center;">
+                                <h5>4. Service Layer</h5>
+                                <p style="font-size: 0.85em;">FastAPI (Python)<br>JWT Security<br>Inference API</p>
+                            </div>
+                            <div style="display: flex; align-items: center; color: var(--accent); font-weight: bold;">→
+                            </div>
+                            <div class="io-box" style="flex: 1; text-align: center;">
+                                <h5>5. UI Layer</h5>
+                                <p style="font-size: 0.85em;">Vanilla JS SPA<br>CSS Grid/Flex<br>Responsive Design</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="highlight-box"
+                        style="grid-column: 1 / -1; background: #f0f9ff; border-color: var(--accent);">
+                        <h3 style="color: var(--accent); margin-top: 0;">🚀 Production Readiness & Scaling</h3>
+                        <div class="content-grid" style="margin-top: 15px; border: none; box-shadow: none;">
+                            <div style="background: transparent; border: none; box-shadow: none; padding: 0;">
+                                <p><strong>🏗️ Compute & Processing:</strong></p>
+                                <ul>
+                                    <li><strong>EKS (Kubernetes):</strong> Horizontal pod autoscaling for the FastAPI
+                                        service.</li>
+                                    <li><strong>Apache Spark (EMR):</strong> Distributed processing for monthly model
+                                        retraining on millions of access records.</li>
+                                    <li><strong>AWS SageMaker/Bedrock:</strong> Low-latency inference and LLM-driven
+                                        explanation generation.</li>
+                                </ul>
+                            </div>
+                            <div style="background: transparent; border: none; box-shadow: none; padding: 0;">
+                                <p><strong>💾 Data & Durability:</strong></p>
+                                <ul>
+                                    <li><strong>Amazon RDS (Aurora):</strong> Multi-AZ deployment for high availability
+                                        and ACID compliance for identity records.</li>
+                                    <li><strong>VPC Isolation:</strong> Private subnets and security groups for
+                                        zero-trust data access.</li>
+                                    <li><strong>Redis (ElastiCache):</strong> Sub-millisecond data retrieval for
+                                        frequent peer-group lookups.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Final CTA -->
+            <div class="footer">
+                <h2 style="color: var(--accent); font-size: 2em; margin-bottom: 15px;">🚀 Ready to Transform IAM
+                    Governance</h2>
+                <p style="font-size: 1.2em; margin-bottom: 15px; color: var(--text-main);">
+                    <strong>Cluster Core</strong> combines rigorous K-Means & DBSCAN machine learning techniques with
+                    enterprise IAM data to deliver highly structured, proactive identity governance.
+                </p>
+
+                <p style="margin-top: 30px; font-size: 1.5em; color: var(--accent);"><strong>Thank You!
+                        Questions?</strong></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STATE STREET.</title>
+    <!-- Modern Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Top Navigation Bar -->
+    <nav id="top-nav" class="hidden">
+        <div class="nav-brand" style="display: flex; align-items: center;">
+            <img src="statestreetlogo.webp" alt="State Street Logo" style="height: 65px;">
+        </div>
+        <div class="nav-actions">
+            <button class="btn btn-outline btn-sm" onclick="app.showView('search-view')"><i
+                    class="fa-solid fa-magnifying-glass"></i> Directory</button>
+            <button class="btn btn-outline btn-sm" onclick="app.showView('anomalies-view')"><i
+                    class="fa-solid fa-bug"></i> Anomalies</button>
+            <button class="btn btn-outline btn-sm" onclick="app.showView('clusters-view')"><i
+                    class="fa-solid fa-layer-group"></i> Clusters</button>
+            <button class="btn btn-primary btn-sm" onclick="app.showView('recommend-view')"><i
+                    class="fa-solid fa-wand-magic-sparkles"></i> Recommend Access</button>
+            <span id="nav-user" style="margin-left: 1rem;">User</span>
+            <button id="logout-btn" class="btn btn-outline btn-sm" onclick="app.logout()">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Container for Application Views -->
+    <main id="app-container">
+
+        <!-- View 1: Login -->
+        <section id="login-view" class="view active-view">
+            <div class="glass-card login-card fade-in">
+                <div class="card-header text-center">
+                    <div style="margin-bottom: 1.5rem;">
+                        <img src="statestreetlogo.webp" alt="State Street Logo" style="max-height: 60px;">
+                    </div>
+                    <p>Enter your credentials to access the IAM review engine.</p>
+                </div>
+                <form id="login-form" onsubmit="app.login(event)">
+                    <div class="form-group">
+                        <label>Username</label>
+                        <input type="text" id="username" placeholder="username" required
+                            value="teja.kolla@statestreet.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" id="password" placeholder="••••••••" required value="password">
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100 mt-4">
+                        <i class="fa-solid fa-lock"></i> Authenticate
+                    </button>
+                    <div id="login-error" class="error-msg mt-3 hidden">Invalid credentials.</div>
+                </form>
+            </div>
+        </section>
+
+        <!-- View 2: Search & Identity Listing -->
+        <section id="search-view" class="view hidden">
+            <div class="glass-card search-card slide-up">
+                <div class="header-split">
+                    <div>
+                        <h2>Identity Directory</h2>
+                        <p>Search identities to review AI-generated access confidence.</p>
+                    </div>
+                </div>
+
+                <!-- Search and Filters -->
+                <div class="search-bar-container">
+                    <div class="search-input-wrapper">
+                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                        <input type="text" id="search-query" placeholder="Search by ID, Department, or Title..."
+                            onkeyup="if(event.key === 'Enter') app.searchIdentities()">
+                    </div>
+                    <button class="btn btn-primary" onclick="app.searchIdentities()">Search</button>
+                </div>
+
+                <div class="controls-bar">
+                    <div class="results-metadata">
+                        <span id="total-results">0 identities found</span>
+                    </div>
+                    <!-- Future: Additional filters can go here -->
+                </div>
+
+                <!-- Results Table -->
+                <div class="table-container fade-in mt-4">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <!-- <th>Identity ID</th> -->
+                                <th>Name</th>
+                                <th>Department</th>
+                                <th>Job Title</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="identities-tbody">
+                            <!-- Populated via JS -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination-container mt-4" id="pagination-controls">
+                    <!-- Populated via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- View 3: Access Items Review -->
+        <section id="review-view" class="view hidden">
+            <div class="glass-card slide-up">
+                <div class="header-split mb-4">
+                    <div>
+                        <button class="btn btn-icon btn-outline back-btn" onclick="app.showView('search-view')">
+                            <i class="fa-solid fa-arrow-left"></i> Back
+                        </button>
+                        <h2 id="review-identity-name" class="mt-3">Access Review: </h2>
+                        <p id="review-identity-subtitle" class="text-muted"></p>
+                    </div>
+                </div>
+
+                <div class="table-container slide-up-delay">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Entitlement Name</th>
+                                <th>Type</th>
+                                <!-- <th>Peer Adoption (Lift)</th> -->
+                                <th>AI Confidence</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="access-items-tbody">
+                            <!-- Populated via JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- View 4: Predict New Joiner -->
+        <section id="recommend-view" class="view hidden">
+            <div class="glass-card slide-up">
+                <div class="header-split mb-4">
+                    <div>
+                        <h2>Access Recommendations</h2>
+                        <p class="text-muted">Enter HR attributes for a new joiner to predict their peer group and
+                            generate highly probable access recommendations.</p>
+                    </div>
+                </div>
+
+                <!-- Input Form -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-bottom: 2rem;">
+                    <div class="form-group">
+                        <label>Department</label>
+                        <input type="text" id="pred-dept" placeholder="e.g., Engineering">
+                    </div>
+                    <div class="form-group">
+                        <label>Job Title</label>
+                        <input type="text" id="pred-title" placeholder="e.g., Software Engineer">
+                    </div>
+                    <div class="form-group">
+                        <label>Location</label>
+                        <input type="text" id="pred-location" placeholder="e.g., Remote">
+                    </div>
+                </div>
+                <div style="text-align: right; margin-bottom: 2rem;">
+                    <button class="btn btn-primary" onclick="app.predictAccess()">
+                        <i class="fa-solid fa-brain"></i> Generate Recommendations
+                    </button>
+                </div>
+
+                <div id="recommendation-results" class="hidden">
+                    <h3 id="recommend-cluster-title" style="margin-bottom: 1rem; color: var(--color-accent);">Predicted
+                        Peer Group: </h3>
+                    <div class="table-container fade-in">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Recommended Item</th>
+                                    <th>Type</th>
+                                    <!-- <th>Adoption Lift</th> -->
+                                    <th>Probability (AI)</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="recommend-items-tbody">
+                                <!-- Populated via JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- View 5: Anomalies -->
+        <section id="anomalies-view" class="view hidden">
+            <div class="glass-card search-card slide-up">
+                <div class="header-split">
+                    <div>
+                        <h2 class="text-danger"><i class="fa-solid fa-bug"></i> High-Risk Anomalies</h2>
+                        <p>Users flagged by the ML pipeline for unusual access patterns.</p>
+                    </div>
+                </div>
+                <div class="table-container fade-in mt-4">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <!-- <th>Identity ID</th> -->
+                                <th>Name</th>
+                                <th>Department</th>
+                                <th>Job Title</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="anomalies-tbody">
+                            <!-- Populated via JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- View 6: Clusters -->
+        <section id="clusters-view" class="view hidden">
+            <div class="glass-card search-card slide-up">
+                <div class="header-split">
+                    <div>
+                        <h2 class="text-primary"><i class="fa-solid fa-layer-group"></i> Discovered Peer Groups</h2>
+                        <p>Clusters identified by KMeans analyzing access and HR features.</p>
+                    </div>
+                </div>
+                <div class="table-container fade-in mt-4">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Cluster ID</th>
+                                <th>Total Users</th>
+                                <th>Dominant Department</th>
+                                <th>Dominant Job Title</th>
+                            </tr>
+                        </thead>
+                        <tbody id="clusters-tbody">
+                            <!-- Populated via JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Confidence Score Info Modal -->
+    <div id="info-modal" class="modal hidden">
+        <div class="modal-overlay" onclick="app.closeExplanation()"></div>
+        <div class="modal-content glass-card fade-in">
+            <div class="header-split mb-4">
+                <h3><i class="fa-solid fa-circle-info" style="color:var(--color-accent)"></i> Score Explanation</h3>
+                <button class="btn-icon btn-outline" onclick="app.closeExplanation()" style="border:none"><i
+                        class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div id="info-modal-body">
+                <!-- Dynamic content populated by JS -->
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
